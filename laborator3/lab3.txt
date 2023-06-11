@@ -1,0 +1,40 @@
+Int -- are limita
+Integer -- e infinit
+--functiile sunt complete
+prima :: Pereche -> Int
+prima (P x y) = x
+p1 = (P 2 3)
+p1 => 
+prima p1 =>
+adoua :: Pereche -> Int
+adoua (P x y) = y
+
+--definitie de tip
+data Pereche    =       Pereche 
+                        {
+                                prima :: Int,
+                                adoua :: Int
+                        }
+                        deriving (Show, Eq)
+--alias pt un tip
+type MyStr      =       [Char] -- va inlocui peste tot unde gaseste MyStr cu char?
+--definite ca Data numai ca doar pt un constructor 
+newtype Something       =       Some Int
+
+Functiile treb sa fie definite pt toate cazurile
+
+--pt a nu rescrie prima parte a functiei, scriu z@ 
+deriv z@(Var x) y = if x == y then Const 1 else z
+------------------------------------------------------------------
+
+-- exemple arbori 
+
+---- Arbori binari de cautare corecti
+(Nod 7(Nod 3(Nod 2 Frunza Frunza)(Nod 4 Frunza Frunza))(Nod 8 Frunza Frunza))
+(Nod 6(Nod 3(Nod 1 Frunza Frunza)(Nod 4 Frunza Frunza))(Nod 11(Nod 8 Frunza Frunza)(Nod 21 Frunza Frunza)))
+(Nod 8(Nod 5(Nod 3 Frunza Frunza)(Nod 9 Frunza Frunza))(Nod 10 Frunza Frunza))
+
+
+--Arbori binari -- NU ABC 
+(Nod 7(Nod 6(Nod 2 Frunza Frunza)(Nod 5 Frunza Frunza))(Nod 9(Nod 8 Frunza Frunza)(Nod 11 Frunza Frunza))) 
+(Nod 8(Nod 3 (Nod 5 Frunza Frunza) (Nod 9 Frunza Frunza))(Nod 10 Frunza Frunza))
