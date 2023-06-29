@@ -1,0 +1,22 @@
+In Haskell, the Maybe type is used to represent values that may or may not exist.
+ It is a way of handling the absence of a value or a "null" value without resorting to exceptions
+  or other error-handling mechanisms.
+
+The Maybe type is defined as follows:
+data Maybe a = Nothing | Just a
+The Maybe type is a parameterized type, meaning that it can hold any type of value, 
+indicated by the a type variable. 
+The Nothing value represents the absence of a value, while the Just constructor is used 
+to wrap a value of type a.
+        firstEven :: [Int] -> Maybe Int
+        firstEven []     = Nothing
+        firstEven (x:xs)
+        | even x      = Just x
+        | otherwise   = firstEven xs
+
+In haskell nu exista notiunea de variabila sau atribuire a unei valori pt o variabila=> apar dificultati. nu se poate modifica memoria 
+
+
+>>= este operatorul Bind monadic; 
+  folosit pt inlantuirea unor functii care returneaza tipul Maybe 
+  
